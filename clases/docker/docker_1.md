@@ -43,7 +43,7 @@ Los tags en github y docker hub muestran los releases de las aplicaciones, mucha
     docker login -u --> el usuario de docker 
     docker pull --> lo mismo que para github
     docker run --> levanta la libreria
-        docker run -d --> detached 
+        docker run -d --> detached desconecta el proceso
         docker run -p --> puerto
     docker ps --> muestra los containers 
         docker ps -a --> muestra todos los containers
