@@ -1,0 +1,3 @@
+[submodule "clases/docker/my-docker-stuff"]
+	path = clases/docker/my-docker-stuff
+	url = https://github.com/adrabenche/my-docker-stuff.git
