@@ -31,6 +31,13 @@ Kernel
 Docker CLI:
 
     i docker run mi-aplicacion --> el CLI de docker es simplemente docker. De esta forma mi-aplicacion se conecta con la API de docker engine.
+        
+        docker container run -d --name spaghettidocker -p 80:80 davidpigna/spaghettidocker
+            docker container run --> le decimos a Daemon que ejecute el contenedor 
+            -d / --detached --> ejecuta el contenedor en segundo plano
+            --name --> le damos el nombre al contenedor, por default le asigna un nombre aleatorio
+            -p / --publish --> mapea los puertos del host al puerto del contenedor
+            davidpigna/spaghettidocker --> es la direccion en la que se encuentra este contenedor 
 
 ## DOCKER HUB
 Es muy parecido a github, mientras en github esta el repositorio de la aplicacion, en docker hub esta la imagen de la aplicacion.
@@ -43,8 +50,8 @@ Los tags en github y docker hub muestran los releases de las aplicaciones, mucha
     docker login -u --> el usuario de docker 
     docker pull --> lo mismo que para github
     docker run --> levanta la libreria
-        docker run -d --> detached desconecta el proceso
-        docker run -p --> puerto
+        docker run -d --> detached desconecta el proceso, ejecuta el container en segundo plano
+        docker run -p --> mapea los puertos del host al puerto del container
     docker ps --> muestra los containers 
         docker ps -a --> muestra todos los containers
     docker stop <nombre> --> para el contenedor
@@ -57,6 +64,7 @@ Los tags en github y docker hub muestran los releases de las aplicaciones, mucha
         docker system prune -a --> borra todo lo que no tenga un container asociado
     
 01.38.14
+
 ## Extras
 Los 3 tipos de virtualizacion
 
@@ -65,4 +73,3 @@ Los 3 tipos de virtualizacion
     virtualization --> en linux DocSend
 
     paravirtualization --> tanto maquina virtual, como el SO y las otras virtual machines funcionan todo al mismo nivel. Solaris
-
