@@ -1,3 +1,25 @@
+# CONTINUOS INTEGRATION / CONTINUOS DEPLOYMENT
+
+Introduccion a CI / CD
+
+    Codigo Fuente
+    |
+    |
+    v
+    Herramienta Build   <-- Repo de librerias externas 
+    (manual / Jenkins)
+    |
+    |
+    v 
+    Unidad de deploy    --> Herramienta de packaging    --> Package     --> Repository
+    (Imagen)
+
+Pipeline de CI) que esto se debe hacer en ambientes de desarrollo
+
+    clono code --> revision de code --> revision de seguridad --> revision de seguridad --> creo Imagen --> test de seguridad Imagen --> subo la Imagen al repositorio (Nexus)
+
+Pipeline de CD) 
+
 ## PAQUETE / ARTIFACT
 
     Es un contenedor de la unidad de deploy para que la misma pueda ser distribuida en los sistemas/instancias en la que deba ser instalada
@@ -25,3 +47,15 @@
     Proxy: obtiene artefactos de un repositorio publico y los guarda internamente. 
 
     Group: es una agrupacion de varios repositorios.
+
+### alternativas a Nexus
+
+    Harbor
+    DockerHub
+    los cloud tienen sus propios repos
+
+### COMANDOS
+
+    docker volume --> crea un volumen que almacena la informacion del contenedor antes de crear el contenedor
+    docker inspect volume <nombre del volumen> --> hace una inspeccion sobre el volumen que creamos
+    
